@@ -25,13 +25,8 @@ static FlutterError *getFlutterError(NSError *error) {
     errorCode = kErrorReasonSignInFailed;
   }
   return [FlutterError errorWithCode:errorCode
-<<<<<<< HEAD
-                             message:self.domain
-                             details:self.localizedDescription];
-=======
                              message:error.domain
                              details:error.localizedDescription];
->>>>>>> c56668aa80bdb3e3866fa47fa05c61094e232f79
 }
 
 @interface FLTGoogleSignInPlugin () <GIDSignInDelegate, GIDSignInUIDelegate>
